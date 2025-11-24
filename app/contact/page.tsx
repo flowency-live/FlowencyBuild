@@ -6,7 +6,7 @@ import { Badge } from '@/components/Badge'
 
 export const metadata = {
   title: 'Contact - Amplified Tech',
-  description: "Let's make your business faster, clearer, and more capable - starting today.",
+  description: 'Let us make your business faster, clearer, and more capable - starting today.',
 }
 
 export default function ContactPage() {
@@ -22,7 +22,7 @@ export default function ContactPage() {
     {
       icon: FileSpreadsheet,
       title: 'Send Us Your Spreadsheet',
-      description: "Running your business on Excel? Send us your worst one - we'll show you what it could become.",
+      description: 'Running your business on Excel? Send us your worst one - we will show you what it could become.',
       action: 'Upload via email',
       email: 'spreadsheets@amplified.co.uk',
     },
@@ -42,11 +42,11 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           <Badge icon={Mail}>Contact Us</Badge>
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-            Let's make your business faster, clearer, and more
+            Let us make your business faster, clearer, and more
             <span className="gradient-text"> capable</span>
           </h1>
           <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto">
-            Whether you want to fix a broken workflow, automate a painful process, replace your spreadsheets, or find out what AI can do for your business… we're ready when you are.
+            Whether you want to fix a broken workflow, automate a painful process, replace your spreadsheets, or find out what AI can do for your business... we are ready when you are.
           </p>
         </div>
       </Section>
@@ -118,7 +118,7 @@ export default function ContactPage() {
               <h3 className="text-2xl font-bold">Not sure what you need?</h3>
             </div>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              No problem. Just tell us what hurts. We'll help you understand what's possible and where the biggest gains are.
+              No problem. Just tell us what hurts. We will help you understand what is possible and where the biggest gains are.
             </p>
           </Card>
         </div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
               What happens <span className="gradient-text">next?</span>
             </h2>
             <p className="text-xl text-foreground/60">
-              Here's what you can expect when you reach out
+              Here is what you can expect when you reach out
             </p>
           </div>
 
@@ -141,7 +141,7 @@ export default function ContactPage() {
               {
                 step: '1',
                 title: 'We respond within 24 hours',
-                description: 'Usually much faster. We'll set up a time that works for you.',
+                description: 'Usually much faster. We will set up a time that works for you.',
               },
               {
                 step: '2',
@@ -151,11 +151,11 @@ export default function ContactPage() {
               {
                 step: '3',
                 title: 'Working prototype delivered',
-                description: 'We build something real to prove what's possible - before you pay anything.',
+                description: 'We build something real to prove what is possible - before you pay anything.',
               },
               {
                 step: '4',
-                title: 'You decide what's next',
+                title: 'You decide what is next',
                 description: 'If you love it, we agree scope and timeline. If not, you walk away with a free tool.',
               },
             ].map((item, i) => (
@@ -180,7 +180,7 @@ export default function ContactPage() {
             Start <span className="gradient-text">Today</span>
           </h2>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-            Transformation doesn't need to be expensive, confusing, or slow.
+            Transformation does not need to be expensive, confusing, or slow.
           </p>
           <div className="space-y-4 text-2xl md:text-3xl font-bold">
             <div className="gradient-text">Get clarity.</div>

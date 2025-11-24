@@ -6,6 +6,7 @@ interface SectionProps {
   className?: string
   gradient?: 'subtle' | 'hero' | 'radial' | 'none'
   padding?: 'sm' | 'md' | 'lg'
+  id?: string
 }
 
 export function Section({
@@ -13,6 +14,7 @@ export function Section({
   className = '',
   gradient = 'none',
   padding = 'lg',
+  id,
 }: SectionProps) {
   const gradients = {
     subtle: 'bg-gradient-to-b from-navy via-navy-light to-navy',
@@ -28,7 +30,7 @@ export function Section({
   }
 
   return (
-    <section className={`${gradients[gradient]} ${paddings[padding]} ${className}`}>
+    <section id={id} className={`${gradients[gradient]} ${paddings[padding]} ${className}`}>
       {gradient === 'radial' && (
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-purple/10 rounded-full blur-3xl pointer-events-none" />
       )}
