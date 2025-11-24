@@ -1,5 +1,7 @@
 <!-- filepath: website/homepage.md -->
 
+**STATUS: BUILT ✅** - Live in [app/page.tsx](../../app/page.tsx)
+
 # Amplified Tech
 
 ## Hero

@@ -1,5 +1,7 @@
 <!-- filepath: website/services.md -->
 
+**STATUS: BUILT ✅** - Live in [app/services/page.tsx](../../app/services/page.tsx)
+
 # Services  - Amplified Tech
 
 We build fast, practical digital capability for SMEs.  

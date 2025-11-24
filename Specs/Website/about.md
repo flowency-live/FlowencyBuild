@@ -1,3 +1,5 @@
+**STATUS: BUILT ✅** - Live in [app/about/page.tsx](../../app/about/page.tsx)
+
 # About Amplified Tech
 
 Amplified Tech exists to solve a simple problem:

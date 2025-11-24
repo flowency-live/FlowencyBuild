@@ -1,3 +1,5 @@
+**STATUS: BUILT ✅** - Live in [app/pricing/page.tsx](../../app/pricing/page.tsx)
+
 # Pricing
 
 Fast, transparent, SME-friendly.
