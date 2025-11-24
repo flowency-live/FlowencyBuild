@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { Outfit } from "next/font/google"
 import "./globals.css"
+import { Navigation } from "@/components/Navigation"
+import { Footer } from "@/components/Footer"
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -17,12 +19,16 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.Node
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en" className={outfit.variable}>
       <body className="antialiased">
-        {children}
+        <Navigation />
+        <div className="pt-20">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   )
