@@ -51,6 +51,9 @@ export function CalEmbed({
         },
         hideEventTypeDetails: config.hideEventTypeDetails,
         layout: config.layout,
+        branding: {
+          hideBranding: true,
+        },
       })
     }
 
