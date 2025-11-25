@@ -106,3 +106,11 @@
 body:not(.calendly-popup-active) {
   overflow: visible !important;
 }
+
+/* Hide Calendly's own cookie banner */
+.calendly-badge-widget,
+.calendly-cookie-banner,
+[class*="cookie-banner"],
+[class*="cookieBanner"] {
+  display: none !important;
+}

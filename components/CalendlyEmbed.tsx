@@ -9,7 +9,7 @@ interface CalendlyEmbedProps {
 }
 
 export function CalendlyEmbed({
-  url = 'https://calendly.com/flow-amplified',
+  url = 'https://calendly.com/flow-amplified?hide_gdpr_banner=1&hide_event_type_details=0',
   className = '',
   minHeight = '700px',
 }: CalendlyEmbedProps) {
