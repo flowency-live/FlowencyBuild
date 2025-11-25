@@ -40,12 +40,10 @@ export function CalendlyEmbed({
   }, [])
 
   return (
-    <div className={`calendly-inline-widget ${className}`}>
-      <div
-        className="calendly-inline-widget"
-        data-url={url}
-        style={{ minWidth: '320px', height: minHeight }}
-      />
-    </div>
+    <div
+      className={`calendly-inline-widget ${className}`}
+      data-url={url}
+      style={{ minWidth: '320px', height: minHeight }}
+    />
   )
 }
