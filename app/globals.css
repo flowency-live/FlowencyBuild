@@ -128,6 +128,15 @@ body:not(.calendly-popup-active) {
   height: 100% !important;
 }
 
+/* Hide Cal.com branding */
+[data-cal-link] a[href*="cal.com"],
+.cal-branding,
+[class*="cal-branding"],
+[id*="cal-branding"] {
+  display: none !important;
+  visibility: hidden !important;
+}
+
 /* Cal.com dark theme overrides to match site colors */
 [data-cal-link] iframe {
   color-scheme: dark;

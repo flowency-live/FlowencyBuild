@@ -12,6 +12,7 @@ export function ContactForm({ className = '' }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
     message: '',
   })
@@ -34,13 +35,13 @@ export function ContactForm({ className = '' }: ContactFormProps) {
       // For now, we'll use a mailto link as fallback
       // In production, this would be replaced with an API endpoint
       const subject = `Contact Form: ${formData.name} from ${formData.company || 'N/A'}`
-      const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0ACompany: ${formData.company || 'N/A'}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
+      const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone || 'N/A'}%0D%0ACompany: ${formData.company || 'N/A'}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`
       const mailtoLink = `mailto:hello@amplified.co.uk?subject=${encodeURIComponent(subject)}&body=${body}`
 
       window.location.href = mailtoLink
 
       setSubmitStatus('success')
-      setFormData({ name: '', email: '', company: '', message: '' })
+      setFormData({ name: '', email: '', phone: '', company: '', message: '' })
     } catch (error) {
       console.error('Form submission failed:', error)
       setSubmitStatus('error')
@@ -51,7 +52,7 @@ export function ContactForm({ className = '' }: ContactFormProps) {
 
   return (
     <form onSubmit={handleSubmit} className={`space-y-6 ${className}`}>
-      <div className="space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {/* Name */}
         <div>
           <label htmlFor="name" className="block text-sm font-semibold text-foreground/90 mb-2">
@@ -86,6 +87,22 @@ export function ContactForm({ className = '' }: ContactFormProps) {
           />
         </div>
 
+        {/* Phone */}
+        <div>
+          <label htmlFor="phone" className="block text-sm font-semibold text-foreground/90 mb-2">
+            Phone
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className="w-full px-4 py-3 rounded-xl bg-card/50 border border-border focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all"
+            placeholder="Your phone number (optional)"
+          />
+        </div>
+
         {/* Company */}
         <div>
           <label htmlFor="company" className="block text-sm font-semibold text-foreground/90 mb-2">
@@ -103,7 +120,7 @@ export function ContactForm({ className = '' }: ContactFormProps) {
         </div>
 
         {/* Message */}
-        <div>
+        <div className="md:col-span-2">
           <label htmlFor="message" className="block text-sm font-semibold text-foreground/90 mb-2">
             Message *
           </label>
