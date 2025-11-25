@@ -92,3 +92,17 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Calendly iframe fixes */
+.calendly-overlay {
+  z-index: 9999 !important;
+}
+
+.calendly-overlay iframe {
+  border: none !important;
+}
+
+/* Prevent scroll lock issues */
+body:not(.calendly-popup-active) {
+  overflow: visible !important;
+}
