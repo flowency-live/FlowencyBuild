@@ -312,7 +312,7 @@ export default function Home() {
                 'You only pay if you want to keep it',
                 'We use AI to build fast — but never let it over-engineer or hallucinate',
                 'We challenge assumptions and tell you the truth',
-                'We build your way — not force you into someone else's framework',
+                "We build your way — not force you into someone else's framework",
                 'We focus on value, visibility and time saved — not hours billed',
                 'No retainers, no long contracts, no hidden fees',
               ].map((item, i) => (
