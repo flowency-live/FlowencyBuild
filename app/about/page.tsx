@@ -1,378 +1,279 @@
 'use client'
 
-import { ArrowRight, FileText, Zap, Users, TrendingUp, Target, CheckCircle2, Sparkles } from 'lucide-react'
-import { Button } from '@/components/Button'
+import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { CalendlyButton } from '@/components/CalendlyButton'
-import { Section } from '@/components/Section'
-import { Card } from '@/components/Card'
-import { Badge } from '@/components/Badge'
+import { Container } from '@/components/Container'
 
 export default function AboutPage() {
-  const differences = [
-    {
-      title: 'We build real things, not documents',
-      description: "We don't produce PowerPoints or recommendations. We build working systems - fast.",
-      icon: FileText,
-    },
-    {
-      title: 'We start with value, not tech',
-      description: 'Save time, increase margin, reduce errors, provide clarity, automate the painful bits. No value = no build.',
-      icon: Target,
-    },
-    {
-      title: 'We amplify your way of working',
-      description: "We don't impose frameworks or force you into someone else's process. We upgrade the way you already operate.",
-      icon: Zap,
-    },
-    {
-      title: 'Working prototypes on day one',
-      description: 'Our discovery process produces a working prototype - in the room - before you ever pay a penny.',
-      icon: Sparkles,
-    },
-    {
-      title: 'Fast, fixed-price MVPs',
-      description: 'Your MVP is delivered in under a week, with clear scope and no surprises.',
-      icon: TrendingUp,
-    },
-    {
-      title: 'Credit-based enhancements',
-      description: 'You evolve at your pace with flexible credit packs. No retainers. No waste.',
-      icon: CheckCircle2,
-    },
-  ]
-
-  const values = [
-    {
-      number: '1',
-      title: 'Practicality over perfection',
-      description: "If it doesn't help today, it's not useful.",
-    },
-    {
-      number: '2',
-      title: 'Radical clarity',
-      description: 'We help you see your business clearly - with dashboards, data, insight, and transparency.',
-    },
-    {
-      number: '3',
-      title: 'No fluff. No jargon. No nonsense.',
-      description: 'SMEs need clarity, not buzzwords.',
-    },
-    {
-      number: '4',
-      title: 'Evidence, not opinions',
-      description: 'We measure what matters. We show you the numbers. We improve what counts.',
-    },
-    {
-      number: '5',
-      title: 'Build fast, evolve continuously',
-      description: 'Small businesses move quickly - your systems should too.',
-    },
-  ]
-
-  const amplifiedMeans = [
-    'More capability',
-    'More clarity',
-    'More speed',
-    'More confidence',
-    'More margin',
-    'More space to grow',
-  ]
-
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
-      <Section gradient="hero" padding="lg">
-        <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
-          <Badge icon={Users}>About Us</Badge>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-            We exist because digital transformation is <span className="gradient-text">broken</span>
-          </h1>
-          <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-xl md:text-2xl text-foreground/80 font-medium">
-              Most SMEs are running multi-million-pound operations on spreadsheets, manual processes, and heroic memory — and they're told that fixing it takes six months and £100k+.
-            </p>
-            <p className="text-2xl md:text-3xl font-bold gradient-text">
-              That's nonsense. We fix it.
-            </p>
-            <p className="text-lg text-foreground/70 leading-relaxed">
-              We build the operating system your business should have had years ago — practical tools, dashboards, automations, and mini-ERPs that give you the clarity and capability usually reserved for large organisations.
-            </p>
-          </div>
-        </div>
-      </Section>
+      {/* Hero Section - Why This Exists */}
+      <section className="relative py-20 md:py-32 lg:py-40 overflow-hidden bg-gradient-to-b from-navy via-navy-light to-navy">
+        {/* Gradient Orbs */}
+        <div className="absolute top-20 -right-20 w-96 h-96 bg-purple/30 rounded-full blur-3xl animate-glow" />
+        <div className="absolute -bottom-20 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-3xl" />
 
-      {/* Mission Section */}
-      <Section className="bg-navy-light" padding="md">
-        <div className="max-w-4xl mx-auto">
-          <Card className="text-center space-y-4">
-            <h2 className="text-2xl md:text-3xl font-bold">Our Mission</h2>
-            <p className="text-lg md:text-xl text-foreground/70 leading-relaxed">
-              To give SMEs the digital capability they never had — and the clarity they've always needed — so they can grow with confidence in the AI era.
-            </p>
-          </Card>
-        </div>
-      </Section>
+        <Container className="relative z-10">
+          <div className="max-w-4xl mx-auto space-y-12 animate-fade-in-up">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight text-center">
+              About
+            </h1>
 
-      {/* Founder Story Section */}
-      <Section gradient="radial" padding="lg">
-        <div className="max-w-4xl mx-auto space-y-8">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold">
-              Why We <span className="gradient-text">Built This</span>
-            </h2>
-          </div>
+            <div className="space-y-8">
+              <h2 className="text-3xl md:text-5xl font-bold">
+                Why this exists
+              </h2>
 
-          <div className="space-y-6 text-lg text-foreground/80 leading-relaxed">
-            <p>
-              After 30 years building products, running operations, and fixing broken systems across startups and scale-ups, one thing became crystal clear:
-            </p>
-            <p className="text-xl font-semibold gradient-text text-center py-4">
-              Most business transformation failures aren't technical — they're human.
-            </p>
-            <p>
-              The traditional approach is fundamentally broken. Consultancies sell you strategy decks and leave. Agencies build websites without context. Dev shops write code without understanding the business. Everyone charges enterprise prices for cookie-cutter solutions.
-            </p>
-            <p>
-              Meanwhile, SMEs — the backbone of the economy — are stuck running £3M+ businesses on spreadsheets and manual processes because they're told "proper systems" cost six figures and take six months.
-            </p>
-            <p className="text-xl font-semibold">
-              That's broken. We fix it.
-            </p>
-            <p>
-              We act as your <strong>SME CTO and delivery team</strong> — bringing 30 years of experience, AI-assisted delivery, and a relentless focus on outcomes. We don't sell hours. We sell <strong>capability</strong>.
-            </p>
-            <p>
-              Every engagement delivers working tools, not PowerPoints. Every build is tailored to how you actually operate. Every prototype is free until you decide it's worth keeping.
-            </p>
-            <p className="text-center text-xl gradient-text font-semibold pt-4">
-              No theatre. No bureaucracy. Just clarity, speed, and capability.
-            </p>
-          </div>
-        </div>
-      </Section>
+              <div className="space-y-6 text-lg md:text-xl text-foreground/70 leading-relaxed">
+                <p>
+                  The way SMEs build digital capability is broken. And I got tired of watching it happen.
+                </p>
 
-      {/* What We're Not Section */}
-      <Section className="bg-navy" padding="lg">
-        <div className="max-w-5xl mx-auto space-y-12">
-          <div className="text-center space-y-4">
-            <h2 className="text-3xl md:text-5xl font-bold">
-              What We're <span className="gradient-text">Not</span>
-            </h2>
-            <p className="text-xl text-foreground/60">
-              Positioning matters. Here's what we're not:
-            </p>
-          </div>
+                <p>
+                  I've spent 30 years building products, fixing operations and delivering real systems across aviation, finance, healthcare and digital operations. I've seen what works. I've seen what fails. And the pattern is always the same.
+                </p>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            <Card className="space-y-4">
-              <h3 className="text-xl font-bold flex items-start gap-3">
-                <span className="text-destructive">✗</span>
-                We're not a consultancy
-              </h3>
-              <p className="text-foreground/70">
-                Consultancies sell you time, frameworks, and opinions. We sell you <strong>outcomes, capability, and digital assets</strong>. You don't get slide decks — you get working tools.
-              </p>
-            </Card>
-
-            <Card className="space-y-4">
-              <h3 className="text-xl font-bold flex items-start gap-3">
-                <span className="text-destructive">✗</span>
-                We're not an agency
-              </h3>
-              <p className="text-foreground/70">
-                Agencies build websites without understanding your operations. We build your <strong>operating system</strong> — the tools and workflows that run your entire business.
-              </p>
-            </Card>
-
-            <Card className="space-y-4">
-              <h3 className="text-xl font-bold flex items-start gap-3">
-                <span className="text-destructive">✗</span>
-                We're not a dev shop
-              </h3>
-              <p className="text-foreground/70">
-                Dev shops code to spec without context. We diagnose the real problem, design the solution, and build exactly what creates value — not what you think you need.
-              </p>
-            </Card>
-
-            <Card className="space-y-4">
-              <h3 className="text-xl font-bold flex items-start gap-3">
-                <span className="text-destructive">✗</span>
-                We're not a SaaS vendor
-              </h3>
-              <p className="text-foreground/70">
-                SaaS tools force you into their way of working. We build <strong>your system</strong> — tailored exactly to how your business operates, not someone else's template.
-              </p>
-            </Card>
-          </div>
-
-          <div className="text-center p-8 rounded-3xl bg-gradient-to-r from-purple/10 to-primary/10 border border-primary/30">
-            <p className="text-2xl font-bold">
-              We're your <span className="gradient-text">SME CTO + delivery team</span>
-            </p>
-            <p className="text-lg text-foreground/70 mt-4">
-              Building the operating system your business should have had years ago.
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* Our Difference Section */}
-      <Section gradient="radial" padding="lg">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <div className="text-center space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold">
-              Our <span className="gradient-text">Difference</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {differences.map((item, i) => (
-              <Card key={i} className="space-y-4">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary to-purple flex items-center justify-center">
-                  <item.icon className="w-6 h-6 text-white" />
+                {/* GOLD STACK: Most transformation failures */}
+                <div className="text-center py-4">
+                  <p className="text-2xl md:text-3xl font-bold gradient-text">
+                    Most transformation failures are not technical. They are human.
+                  </p>
                 </div>
-                <h3 className="text-xl font-bold">{item.title}</h3>
-                <p className="text-foreground/70">{item.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </Section>
 
-      {/* Who We Work With */}
-      <Section className="bg-navy-light" padding="lg">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <div className="text-center space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold">
-              Who We <span className="gradient-text">Work With</span>
-            </h2>
-            <p className="text-xl text-foreground/60 max-w-3xl mx-auto">
-              Amplified Tech is built for:
-            </p>
-          </div>
+                <p>
+                  I've watched businesses spend six months debating a deck instead of fixing the problem. I've watched consultancies sell frameworks that gather dust. I've watched agencies deliver beautiful websites that do nothing to help people do their jobs. I've watched dev teams over-engineer systems nobody asked for.
+                </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {[
-              'SMEs stuck in spreadsheets',
-              'Founders with ideas but no tech team',
-              'Operations teams drowning in admin',
-              'Scale-ups needing clarity before investment',
-              'Businesses frustrated with agencies, dev shops, or big consultancies',
-              'Anyone who knows AI can help them - but doesn\'t know where to start',
-            ].map((item, i) => (
-              <div key={i} className="flex items-start gap-3 p-6 rounded-2xl bg-card/50 backdrop-blur border border-border hover:border-primary/30 transition-all duration-300">
-                <CheckCircle2 className="w-6 h-6 text-primary flex-shrink-0 mt-0.5" />
-                <p className="text-foreground/80 font-medium">{item}</p>
+                {/* GOLD STACK: Spreadsheets and heroics */}
+                <p>
+                  And meanwhile, SMEs are running multi-million pound operations on <strong>spreadsheets, inboxes and heroic memory.</strong>
+                </p>
+
+                <p className="text-foreground/60">
+                  Not because they lack ambition. Because they lack access.
+                </p>
+
+                <p>
+                  No internal tech team. No CTO. No one who can diagnose the real problem and actually deliver a fix. No time to step back and see clearly. No partner who tells them the truth. No access to the kind of capability that bigger firms take for granted.
+                </p>
+
+                <p className="font-semibold text-xl">
+                  That gap is why this company exists.
+                </p>
+
+                <p>
+                  I built something different because SMEs deserve better. They move fast. They make decisions. They don't hide behind committees. They just need someone who can match that pace and build what they actually need.
+                </p>
+
+                <p>
+                  My approach is simple: get in the room, understand the real problem, and build a working solution before anyone has time to write a specification document.
+                </p>
+
+                <p>
+                  Working prototypes on day one. MVPs in a week. Systems tailored to your operation. No jargon. No theatre. No wasted effort.
+                </p>
+
+                {/* GOLD STACK: If you can describe */}
+                <div className="text-center py-4">
+                  <p className="text-2xl md:text-3xl font-bold gradient-text">
+                    If you can describe the problem, we can build the system.
+                  </p>
+                </div>
               </div>
-            ))}
-          </div>
-
-          <div className="text-center max-w-3xl mx-auto p-8 rounded-3xl bg-gradient-to-r from-purple/10 to-primary/10 border border-primary/30">
-            <p className="text-xl font-semibold">
-              If you run a business but don't have time to build the tools you need…
-              <br />
-              <span className="gradient-text">We build them for you.</span>
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* Our Values */}
-      <Section gradient="radial" padding="lg">
-        <div className="max-w-6xl mx-auto space-y-16">
-          <div className="text-center space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold">
-              Our <span className="gradient-text">Values</span>
-            </h2>
-          </div>
-
-          <div className="space-y-8">
-            {values.map((item, i) => (
-              <Card key={i} className="flex flex-col md:flex-row gap-6 items-start">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-purple flex items-center justify-center text-xl font-bold">
-                  {item.number}
-                </div>
-                <div className="space-y-2 flex-1">
-                  <h3 className="text-xl font-bold">{item.title}</h3>
-                  <p className="text-foreground/70">{item.description}</p>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </Section>
-
-      {/* What Amplified Means */}
-      <Section className="bg-navy-light" padding="lg">
-        <div className="max-w-4xl mx-auto space-y-12">
-          <div className="text-center space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold">
-              What "<span className="gradient-text">Amplified</span>" Means to Us
-            </h2>
-            <p className="text-xl text-foreground/60">
-              It means giving you:
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {amplifiedMeans.map((item, i) => (
-              <div
-                key={i}
-                className="p-6 rounded-2xl bg-gradient-to-br from-card to-card/50 border border-border hover:border-primary/30 transition-all duration-300 text-center"
-              >
-                <p className="text-lg font-semibold gradient-text">{item}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center p-8 rounded-3xl bg-gradient-to-r from-purple/10 to-primary/10 border border-primary/30">
-            <p className="text-2xl font-bold">
-              We don't just build tools.
-              <br />
-              <span className="gradient-text">We amplify your business.</span>
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* CTA Section */}
-      <Section gradient="hero" padding="lg">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h2 className="text-3xl md:text-5xl font-bold">
-            Start with a <span className="gradient-text">Free Discovery Session</span>
-          </h2>
-          <p className="text-xl text-foreground/70">
-            It costs nothing to see what's possible.
-          </p>
-          <div className="space-y-4 max-w-2xl mx-auto text-left">
-            <p className="text-lg text-foreground/80 font-medium">You'll walk away with:</p>
-            <div className="grid gap-3">
-              {[
-                'A working prototype',
-                'A clarity report',
-                'Your biggest opportunities identified',
-                'A plan to start tomorrow',
-              ].map((item, i) => (
-                <div key={i} className="flex items-center gap-3 p-4 rounded-xl bg-card/50 backdrop-blur border border-border">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0" />
-                  <span className="text-foreground/90">{item}</span>
-                </div>
-              ))}
             </div>
           </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <CalendlyButton size="lg" className="group">
-              Get your free discovery session
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </CalendlyButton>
+        </Container>
+      </section>
+
+      {/* Who We Are Section */}
+      <section className="py-20 md:py-32 bg-navy-light border-b border-primary/20">
+        <Container>
+          <div className="max-w-4xl mx-auto space-y-12">
+            <h2 className="text-3xl md:text-5xl font-bold">
+              Who we are
+            </h2>
+
+            <div className="space-y-6 text-lg md:text-xl text-foreground/70 leading-relaxed">
+              <p>
+                We are senior product, technology and operations people who have spent decades building and scaling complex systems.
+              </p>
+
+              {/* GOLD STACK: SME CTO + Delivery Team */}
+              <div className="text-center py-4">
+                <p className="text-2xl md:text-3xl font-bold gradient-text">
+                  We act as the SME equivalent of an internal CTO plus a high-performing delivery team.
+                </p>
+              </div>
+
+              <p>
+                We design and build the digital operating system your business should have had years ago. Fast. Tailored. Practical. Affordable.
+              </p>
+
+              {/* GOLD STACK: Clarity + Speed + Capability */}
+              <div className="text-center py-4">
+                <p className="text-2xl md:text-3xl font-bold gradient-text">
+                  Clarity + Speed + Capability.
+                </p>
+              </div>
+
+              <p className="font-semibold">Our combined expertise covers:</p>
+
+              <div className="grid md:grid-cols-2 gap-3 pt-4">
+                {[
+                  'Product strategy and rapid build',
+                  'Cloud architecture and modern engineering',
+                  'AI-assisted development and automation',
+                  'Operations and workflow optimisation',
+                  'Data modelling and intelligent dashboards',
+                  'Change, adoption and continuous improvement',
+                ].map((item, i) => (
+                  <div
+                    key={i}
+                    className="flex items-start gap-3 p-4 rounded-xl bg-card/50 backdrop-blur border border-border hover:border-primary/30 transition-all duration-300"
+                  >
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <p className="text-foreground/80">{item}</p>
+                  </div>
+                ))}
+              </div>
+
+              <p>
+                We do not impose frameworks. We do not sell boilerplate processes. We do not gold-plate technology.
+              </p>
+
+              <p className="font-semibold">
+                We amplify what already works inside your business and remove what slows you down.
+              </p>
+            </div>
           </div>
-          <p className="text-lg font-medium">
-            <span className="gradient-text">Amplify your business.</span>
-            <br />
-            Don't get left behind.
-          </p>
-        </div>
-      </Section>
+        </Container>
+      </section>
+
+      {/* How We Work Section */}
+      <section className="py-20 md:py-32 bg-navy border-b border-primary/20">
+        <Container>
+          <div className="max-w-6xl mx-auto space-y-16">
+            <h2 className="text-3xl md:text-5xl font-bold text-center">
+              How we work
+            </h2>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Clarity before complexity */}
+              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 space-y-4">
+                <h3 className="text-xl font-bold">Clarity before complexity</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  We cut through noise. We find what is really blocking you. Fast.
+                </p>
+              </div>
+
+              {/* Build smallest thing */}
+              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 space-y-4">
+                <h3 className="text-xl font-bold">Build the smallest thing that creates real value</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  No bloat. No scope creep. Just the tool that moves the needle.
+                </p>
+              </div>
+
+              {/* Working prototypes */}
+              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 space-y-4">
+                <h3 className="text-xl font-bold">Show working prototypes on day one</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  We do not talk for weeks. We build. You see your system with your own data before spending anything meaningful.
+                </p>
+              </div>
+
+              {/* Use AI safely */}
+              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 space-y-4">
+                <h3 className="text-xl font-bold">Use AI safely and predictably</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  We use AI to move fast and keep costs down. But every system is shaped by experienced humans who understand your business - not just the technology.
+                </p>
+              </div>
+
+              {/* Leave capability */}
+              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 space-y-4">
+                <h3 className="text-xl font-bold">Leave clients with capability that lasts</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  Every engagement leaves you with permanent improvement. Real tools. Real assets. Not documentation. Not theory.
+                </p>
+              </div>
+
+              {/* Make transformation accessible */}
+              <div className="p-8 rounded-3xl bg-card/80 backdrop-blur border border-border hover:border-primary/50 transition-all duration-300 space-y-4">
+                <h3 className="text-xl font-bold">Make transformation accessible, not intimidating</h3>
+                <p className="text-foreground/70 leading-relaxed">
+                  Our superpower isn't AI. It's making digital transformation accessible to businesses like yours.
+                </p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* What We Believe Section */}
+      <section className="py-20 md:py-32 bg-navy-light">
+        <Container>
+          <div className="max-w-4xl mx-auto space-y-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-center">
+              What we believe
+            </h2>
+
+            <div className="space-y-8 text-lg md:text-xl text-foreground/70 leading-relaxed text-center">
+              <p>
+                SMEs do not lack ambition. They lack access.
+              </p>
+
+              <p>
+                They have no CTO, no delivery team, no one who can translate their business into the systems they actually need.
+              </p>
+
+              <p className="font-semibold">
+                That's the gap we fill.
+              </p>
+
+              {/* GOLD STACK: AI + Humans */}
+              <div className="py-4">
+                <p className="text-2xl md:text-3xl font-bold gradient-text">
+                  AI + Humans = Practical transformation.
+                </p>
+              </div>
+
+              <p>
+                We give SMEs their own operating system so they can run their business with clarity, confidence and ease.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Final Statement Section */}
+      <section className="py-20 md:py-32 bg-navy">
+        <Container>
+          <div className="max-w-4xl mx-auto text-center space-y-12">
+            {/* GOLD STACK: Good people compensating */}
+            <h2 className="text-3xl md:text-5xl font-bold">
+              <span className="gradient-text">If your business is held together by good people compensating for bad systems, we fix that.</span>
+            </h2>
+
+            <div className="space-y-6 text-lg md:text-xl text-foreground/70 leading-relaxed">
+              <p className="font-semibold text-2xl">
+                It is time SMEs had their own operating system.
+              </p>
+
+              <p className="font-semibold text-2xl">
+                That is what we build.
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+              <CalendlyButton size="lg" className="group">
+                Book a Working Session
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </CalendlyButton>
+            </div>
+          </div>
+        </Container>
+      </section>
     </main>
   )
 }
